@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.hidden-md {
+    display: block;
+}
+
+
+
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+main {
+    background: rgb(161,135,37);
+    background: linear-gradient(135deg, rgba(161,135,37,1) 0%, rgba(0,0,0,1) 81%);
+    width: 100%
+}
+
+.sidebar {
+    float: left;
+    height: calc(100vh - 100px);
+    width: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #b3b3b3;
+    position: relative;
+}
+
+.sidebar a {
+    color: #b3b3b3;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar .logo-box {
+    padding: 15px;
+}
+
+.sidebar .small-logo-box {
+    width: 50px;
+    margin: auto;
+}
+
+.sidebar .logo-box .logo {
+    width: 131px;
+    height: 40px;
+}
+
+
+.sidebar .small-logo {
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.sidebar li {
+    margin-top: 5px;
+    border-left: 4px solid transparent;
+}
+
+.website-sections li.current-item {
+    border-left-color: lightgreen;
+
+}
+
+.website-sections li.current-item a {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+a:hover {
+    color: white;
+}
+
+.website-sections li a i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.sidebar a span {
+    display: inline-block;
+}
+
+.sidebar .your-playlists {
+    text-align: left;
+    font-size: 14px;
+    margin: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sidebar .your-playlists li:first-child {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sidebar .your-playlists li a {
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0;
+}
+
+.sidebar .your-playlists .add-playlist::before {
+    content: '+';
+    display: block;
+    float: left;
+    font-size: 30px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    background-color: #b3b3b3;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.sidebar .your-playlists .liked-playlist::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: '\f004';
+    display: block;
+    float: left;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background-color: lightblue;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.bottom-sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.cta a {
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile a {
+    display: block;
+    padding: 10px 5px 0;
+    font-size: 20px;
+    color: white;
+}
+
+section {
+    float: left;
+    height: calc(100vh - 100px);
+    width: calc(100% - 80px);
+    overflow: auto;
+    color: transparent;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(30, 30, 30);
+    border-top: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+    .visible-md {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hidden-md {
+        display: none !important;
+    }
+
+    .visible-md {
+        display: block;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+
+
+    .website-sections li {
+        text-align: left;
+    }
+
+    .bottom-sidebar {
+        text-align: left;
+    }
+
+
+
+    section {
+        width: calc(100% - 200px);
+    }
+}
