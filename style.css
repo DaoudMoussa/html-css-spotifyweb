@@ -6,11 +6,21 @@
     font-family: 'Lato', sans-serif;
 }
 
+.container {
+    width: 100%;
+    padding: 20px;
+}
 .hidden-md {
     display: block;
 }
 
+.hidden-lg {
+    display: block;
+}
 
+.visible-lg {
+    display: none;
+}
 
 .clearfix {
     content: '';
@@ -61,7 +71,7 @@ main {
 
 }
 
-ul {
+.sidebar ul {
     list-style-type: none;
     margin-top: 20px;
 }
@@ -73,7 +83,6 @@ ul {
 
 .website-sections li.current-item {
     border-left-color: lightgreen;
-
 }
 
 .website-sections li.current-item a {
@@ -172,12 +181,108 @@ a:hover {
     color: white;
 }
 
-section {
+.main-page {
     float: left;
     height: calc(100vh - 100px);
     width: calc(100% - 80px);
     overflow: auto;
     color: transparent;
+    color: white;
+
+}
+
+.hamburger-menu i {
+    float: right;
+    font-size: 28px;
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    position: relative;
+    white-space: nowrap;
+
+}
+
+nav .current-item::after {
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background: lightgreen;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .current-item a {
+    color: white;
+}
+
+nav a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+.content {
+    color: white;
+    font-size: 14px;
+}
+
+.content h2 {
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.content .artists-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content .artists-list-container .card {
+    margin: 15px;
+    text-align: center;
+}
+
+.content .artists-list-container .card a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.content .artists-list-container .card a:hover {
+    transform: scale(1.1);
+}
+
+.content .artists-list-container .card img {
+    width: 140px;
+    margin: auto;
+    margin-bottom: 5px;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.content .artists-list-container .card div {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img-circle {
+    border-radius: 50%;
 }
 
 footer {
@@ -205,8 +310,6 @@ footer {
         width: 200px;
     }
 
-
-
     .website-sections li {
         text-align: left;
     }
@@ -215,9 +318,27 @@ footer {
         text-align: left;
     }
 
-
-
-    section {
+    .main-page {
         width: calc(100% - 200px);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .visible-lg {
+        display: block;
+    }
+
+    .hidden-lg {
+        display:none;
+    }
+
+    .container {
+        max-width: 992px;
+        margin: auto;
+
+    }
+
+    .content .artists-list-container {
+        justify-content: flex-start;
     }
 }
