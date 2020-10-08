@@ -461,6 +461,10 @@ a.song-name {
         width: calc(100% - 200px);
     }
 
+    .content .artists-list-container {
+        justify-content: flex-start;
+    }
+
     .left-footer-md {
         order: -1;
     }
@@ -484,10 +488,6 @@ a.song-name {
         max-width: 992px;
         margin: auto;
 
-    }
-
-    .content .artists-list-container {
-        justify-content: flex-start;
     }
 
     .current-song {
